@@ -1,0 +1,26 @@
+INSTALL SOME PACKAGES FIRST
+INCREASE FONT SIZE OF COMMAND PROMPT
+
+#Objective- To learn to install and manage packages with pip, to explore the PyPI
+
+*open command prompt*
+pip list
+
+pip freeze
+
+pip search botany
+
+pip install numpy
+*open site-packages*
+pip install numpy==1.16.2
+*open IDLE*
+import numpy
+numpy.__version__
+
+*open command prompt*
+pip install --upgrade numpy
+
+
+
+*open https://pypi.org/*
+astronomy

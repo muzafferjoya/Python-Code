@@ -1,0 +1,66 @@
+import sys
+sys.version
+sys.version_info
+
+dir(sys)
+
+--------------------------------
+
+x = 42
+x
+print(x)
+
+def show(x):
+	print(“Output:”, x)
+sys.displayhook = show
+x
+
+print(x)
+
+----------------------------------
+
+print("Type in value: ",sys.stdin.readline()[:-1])
+23
+
+sys.stdout.write('Way to write')
+
+----------------------------------
+
+import math
+sys.modules
+
+sys.path
+sys.path.append(‘C:\\Users\\Admin\\Desktop’)
+
+for num in range(100):
+	print(num)
+	if num==5: sys.exit()
+
+
+------------------------------------
+
+saveout = sys.stdout
+fsock=open('out.log','w')
+sys.stdout=fsock
+print('Message to log')
+sys.stdout=saveout
+fsock.close()
+
+*open out.log*
+
+-------------------------------------
+
+fsock=open('error.log','w') #Opening the file
+sys.stderr=fsock 
+raise Exception('this is an error')
+fsock.close()
+
+*open error.log*
+
+--------------------------------------
+
+import time
+for num in range(10):
+	print(num)
+	sys.stdout.flush()
+	time.sleep(1)

@@ -1,0 +1,50 @@
+from random import seed, random
+seed(8)
+random(),random(),random(),random()
+
+random()*10+3
+
+from random import randint
+randint(0,9)
+
+list=[3,4,5,6,7]
+from random import choice
+choice(list)
+
+
+
+
+
+#Dice Simulator- Write a function that pretends to roll a dice and return a number from 1 to 6 every time you call it.
+
+from random import random
+def roll_dice():
+    return int(random()*6)+1
+
+#OR
+
+#import numpy.random
+#def roll_dice():
+#   return int(numpy.random.random()*6)+1
+
+
+roll_dice()
+roll_dice()
+roll_dice()
+roll_dice()
+
+
+
+
+
+#Five Even Randoms- Write a function that takes a start and an end value and generates 5 random numbers in this range. Out of these, it picks the even numbers and puts them in a list, and returns that. Ultimately, we have anywhere from 0 to 5 random numbers.
+
+import random
+
+def five_even_randoms(start,end):
+    return [num for num in random.sample(range(start,end+1),5) if num%2==0]
+
+
+five_even_randoms(20,100)
+five_even_randoms(20,100)
+five_even_randoms(20,100)
