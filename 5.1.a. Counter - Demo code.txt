@@ -1,0 +1,40 @@
+from collections import Counter
+
+c=Counter(['a','b','c','a','b','a'])
+c
+
+Counter("Hello")
+
+for item in c.elements(): print(item,end='')
+
+c+c
+
+
+
+
+
+#String Compression- Write a function that takes a string and returns a compressed version of it. Compress multiple occurrences of a letter to hold the letter and its count. Assume that duplicates only exist together.
+
+def compress(string):
+   s=''
+   count=Counter(string)
+   for letter in count:
+       s+=letter+str(count[letter])
+   return s
+
+
+compress(“AAAAaaBCCCDDe”)
+
+
+
+
+#Top Search- Write a function that takes a history of searched keywords and declares the most-searched keyword along with the number of searches.
+
+def top_search(keywords):
+	counter=Counter(keywords)
+	return f'{counter.most_common(1)[0][0]} was searched {counter.most_common(1)[0][1]} times'
+
+
+keywords=['Python','Java','Python','C','Lisp','JavaScript','Java','C++', 'C++', 'C#', 'Swift', 'C++', 'Python', 'Java']
+
+top_search(keywords)

@@ -1,0 +1,28 @@
+#Objective- To analyze the namedtuple in Python
+
+from collections import namedtuple
+Colors = namedtuple('Colors', 'red green blue')
+red = Colors(red=255, green=0, blue=0)
+green = Colors(red=0, green=255, blue=0)
+blue = Colors(red=0, green=0, blue=255)
+red
+red._fields
+
+------------------------------------------------------------------
+
+pets = namedtuple('pets', ['name', 'age'])
+Fluffy = pets('Fluffy', 9)
+Fluffy
+
+red.red
+red.green
+red[0]
+getattr(red, 'green')
+
+-------------------------------------------------------------------
+
+red._asdict()
+Colors._make(['Purple','Violet','Gold'])
+Colors(**{'red':255,'green':0,'blue':0})
+
+red._replace(green=1)

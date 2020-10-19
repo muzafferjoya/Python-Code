@@ -1,0 +1,40 @@
+#Objective- To understand the OrderedDict in Python
+
+from collections import OrderedDict
+d = OrderedDict()
+d['a']=1
+d['e']=5
+d['d']=4
+d['b']=2
+d['c']=3
+d
+
+d.move_to_end('e')
+d['e']=7
+d
+
+d.pop('e')
+d['e']=5
+d
+
+d.popitem()
+
+
+
+
+
+#Delicious Diners- You have joined as assistant to the head chef in a new restaurant. Write a function that takes a list of orders with the items and their quantities, and inform the chef of the quantity to prepare for each item ordered. Make sure to do this in the order of orders received.
+
+def diner(orders):
+    new_orders=OrderedDict()
+    for item,quantity in orders:
+        if item not in new_orders:
+            new_orders[item]=quantity
+        else:
+            new_orders[item]+=quantity
+    for item, quantity in new_orders.items():
+        print(item,quantity)
+
+
+diner([('deviled eggs',2),('ham',1),('deviled eggs',1)])
+diner([('ham',1),('deviled eggs',2),('deviled eggs',1)])

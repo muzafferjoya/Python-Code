@@ -1,0 +1,49 @@
+*create a folder 'calc'*
+*create a file calculator.py*
+
+-----------------------------------
+
+def add(a,b):
+     return a+b
+def sub(a,b): 
+     return a-b
+def mul(a,b):
+     return a*b
+def div(a,b):
+     return a/b
+def exp(a,b):
+     return a**b
+def floordiv(a,b):
+     return a//b
+
+---------------------------------
+
+*open calc*
+*open pycache*
+
+*open IDLE* > import calc
+from calc import calculator
+from calc.calculator import *
+from calc.calculator import floordiv
+fd=floordiv
+fd(7.3,4)
+
+from calc.calculator import floordiv as fd
+from calc.calculator import floordiv as fd, exp as pow
+
+-----------------------------------
+
+*open calculator.py*
+
+if __name__ == “__main__”:
+      import sys
+      if int(sys.argv[1])==1:
+            add(int(sys.argv[2]),int(sys.argv[3]))
+      elif int(sys.argv[1])==2:
+            sub(int(sys.argv[2]),int(sys.argv[3]))
+
+*open command prompt*
+
+python calc.py 2 3 4
+
+-----------------------------------

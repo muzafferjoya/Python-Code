@@ -1,0 +1,70 @@
+#Objective- To understand defaultdict in Python
+
+from collections import defaultdict
+def default(): return 42
+mydict=defaultdict(default)
+mydict['a']=1
+mydict['b']=2
+mydict['c']=3
+mydict['d']
+
+------------------------------------
+
+score=defaultdict(lambda :23)
+score['Hannah']=98
+score['Lucy']=76
+score['Hannah']
+score['Irene']
+score.keys()
+
+------------------------------------
+
+mylist=[('a',1),('b',2),('c',3)]
+newdict=defaultdict(list)
+for key,value in mylist:
+                newdict[key].append(value)              
+
+newdict
+newdict['d']
+
+------------------------------------
+
+name='Puddles'
+mydict=defaultdict(int)
+for letter in name:
+                mydict[letter]+=1              
+
+mydict
+mydict['o']
+
+
+
+
+
+#Switchboard- A switchboard has 6 switches. Write a function that returns a string of six 0’s and 1’s- 0 for the switches that are OFF, and 1 for those that are ON. Only one switch can be ON at a time.
+
+def switchboard(switch):
+	board=defaultdict(lambda :0)
+	board[switch]=1
+	return ''.join([str(board[num]) for num in range(1,7)])
+
+switchboard(4)
+switchboard(2)
+switchboard(6)
+
+
+
+
+
+#Scratchcard- Ten people buy a scratchcard each. Randomly, one of them wins $1000. Everyone else wins $1 each. Write a function implementing this.
+
+from random import choice
+def scratchcard():
+	tickets=[*range(1,11)]
+	results=defaultdict(lambda :'$1')
+	results[choice(tickets)]='$1000'
+	for num in range(1,11): print(num,results[num])
+
+
+
+scratchcard()
