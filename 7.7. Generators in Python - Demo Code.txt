@@ -1,0 +1,41 @@
+#Objective- To implement generators in Python
+
+def countdown():
+	second=10
+	while(second>=1):
+		yield second
+		second-=1
+
+for second in countdown():
+	print(second)
+
+-------------------------------------------------------------------------
+
+def power(num):
+	while num>=1:
+		if num%2==0: yield num**2
+		elif num%3==0: yield num**3
+		else: yield num
+		num-=1
+
+for number in power(12):
+	print(number)
+
+--------------------------------------------------------------------------
+
+def even_squares(num):
+	for index in range(num):
+		if index**2%2==0:
+			yield index**2
+
+list(even_squares(10))
+
+---------------------------------------------------------------------------
+
+mylist=[1,3,6,10]
+numbers = (num**2 for num in mylist)
+next(numbers)
+next(numbers)
+next(numbers)
+next(numbers)
+next(numbers)

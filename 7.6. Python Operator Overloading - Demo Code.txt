@@ -1,0 +1,42 @@
+#Objective- To overload operators in Python
+
+42 + 1
+'42'+'1'
+'hello'+' '+'world'
+[1,2,3]+[4,5,6]
+
+class number:
+	def __init__(self,num):
+		self.num=num
+
+three,four = number(3), number(4)
+print(three+four)
+
+---------------------------------------------------------
+
+class number:
+	def __init__(self,num,fraction):
+		self.num=num
+		self.fraction=fraction
+	def __str__(self):
+		return f"{self.num}.{self.fraction}"
+
+seven_one=number(7,1)
+print(str(seven_one))
+
+---------------------------------------------------------
+
+class myfloat:
+	def __init__(self,whole,fraction):
+		self.whole=whole
+		self.fraction=fraction
+	def shownumber(self):
+		print(f"{self.whole}.{self.fraction}")
+	def __add__(self,other):
+		if(self.fraction+other.fraction)>9:
+			return myfloat(self.whole+other.whole+1,self.fraction+other.fraction-10)
+		return myfloat(self.whole+other.whole,self.fraction+other.fraction)
+
+num1,num2 = myfloat(3,7), myfloat(3,4)
+res=num1+num2
+res.shownumber()

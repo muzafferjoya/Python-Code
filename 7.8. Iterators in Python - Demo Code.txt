@@ -1,0 +1,48 @@
+evens=[2,4,6,8,10]
+evenIterator=iter(evens)
+next(evenIterator)
+next(evenIterator)
+
+
+
+
+
+#One List- Write a function that takes two lists and concatenates them using an iterator.
+
+def one_list(list1,list2):
+	nums=iter(list1+list2)
+	list3=[]
+	try:
+		while(True):
+			list3.append(next(nums))
+	except StopIteration:
+		pass
+	return list3
+
+
+one_list([1,2,3],[4,5,6])
+
+one_list([1,2],[4,5,6])
+
+
+
+
+
+
+#Sort Nums- Write a function that takes in a list holding only integers and strings, and returns the list with the integers sorted without disturbing the positions of the strings.def 
+
+sort_nums(items):
+    nums=iter(sorted([num for num in items if str(num).isdigit()]))
+    res=[]
+    for item in items:
+        res.append(item) if str(item).isalpha() else res.append(next(nums))
+    return res
+
+
+sort_nums(['cool'])
+
+sort_nums([2, 1])
+
+sort_nums(['a', 4, 1, 'c', 3, 'b'])
+
+sort_nums([2, 'c', 0, 2, 'c', 3, 'b'])

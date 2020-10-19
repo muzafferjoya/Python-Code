@@ -1,0 +1,17 @@
+Serialization is the act of converting structured data to a format that lets us share and store in a form from which we can recover from. Python supports serialization and de-serialization of objects. Let's demonstrate that using the built-in pickle module.
+
+@Let's import pickle and os.
+@Now, x is 7,
+@Let's move to the Documents directory for the Admin user.
+@Open this file abcde.txt- we'll assume that this already exists.
+@Dump the value of x into this file.
+@The contents may not show up yet, so let's close the file here.
+*Open abcde.txt*The value of x has been dumped here.
+
+If we didn't want to actually pickle it, but find out what it would pickle, we use the @dumps() function.
+
+@Now, open it again in read-binary mode,
+@And load from this file 'f'.
+
+@Get to the start of this file again.
+@Now, this is what it loads.
