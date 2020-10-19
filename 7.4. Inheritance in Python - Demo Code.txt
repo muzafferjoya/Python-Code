@@ -1,0 +1,111 @@
+#Objective- To understand inheritance and its types
+
+class Person:
+                pass
+
+class Student(Person):
+                pass
+
+issubclass(Student,Person)
+
+-------------------------------------------------------------
+
+x=0
+class fruit:
+                def __init__(self):
+                                global x
+                                x+=1
+                                print("I'm a fruit")
+                          
+class citrus(fruit):
+                def __init__(self):
+                                super().__init__()
+                                global x
+                                x+=2
+                                print("I'm citrus") 
+
+lime=citrus()
+print(x)
+
+--------------------------------------------------------------
+
+class Color:
+                pass
+
+class Fruit:
+                pass
+
+class Orange(Color,Fruit):
+                pass
+
+--------------------------------------------------------------
+
+class accessories:
+                size=7         
+
+class footwear(accessories):
+                pass
+
+class stilettos(footwear):
+                pass
+
+Giuseppe_Zanotti=stilettos()
+Giuseppe_Zanotti.size
+
+---------------------------------------------------------------
+
+class clothing:
+                pass
+
+class winterwear(clothing):
+                pass
+
+class socks(clothing):
+                pass
+
+---------------------------------------------------------------
+
+class parent:
+                eyes=‘hazel’       
+
+class mother(parent):
+                pass
+
+class father(parent):
+                pass
+
+class child(mother,father):
+                pass
+
+Rowan=child()
+Rowan.eyes
+
+-----------------------------------------------------------------
+
+class Athlete:
+	def warming_up(self):
+		print("I am warming up")
+	def sprinting(self):
+		print("I am sprinting") 
+
+class Champion(Athlete):
+	def gloat(self):
+		super().warming_up()
+		print("I am a champion")
+		super().sprinting() 
+
+Bolt=Champion()
+Bolt.gloat()
+
+-------------------------------------------------------------------
+
+class alice:
+                def sayhi(self):
+                                print("I'm Alice")                          
+
+class bob(alice):
+                def sayhi(self):
+                                print("I'm Bob")                             
+
+bob1=bob()
+bob1.sayhi()

@@ -1,0 +1,74 @@
+#Objective- To implement methods in Python
+
+class Car:
+	def __init__(self,brand,model,color,fuel):
+		self.brand=brand
+		self.model=model
+		self.color=color
+		self.fuel=fuel
+	def start(self):
+		pass
+	def halt(self):
+		pass
+	def drift(self):
+		pass
+	def speedup(self):
+		pass
+	def turn(self):
+		pass
+
+blackverna=Car('Hyundai','Verna','Black','Diesel')
+blackverna.drift()
+
+------------------------------------------------------------------
+
+class Try:
+        def __init__(self):
+                pass
+        def printhello(self,name):
+                print(f"Hello, {name}")
+                return name
+
+Try().printhello('Ayushi')
+
+------------------------------------------------------------------
+
+class Result:
+            def __init__(self,phy,chem,math):
+                       self.phy=phy
+                       self.chem=chem
+                       self.math=math
+            def printavg(self):
+                           print(f"Average={(self.phy+self.chem+self.math)/3}")
+
+------------------------------------------------------------------
+------------------------------------------------------------------
+
+#Funny Parentheses- Write a function that validates a string with parentheses, curly braces, and square brackets.
+
+class parentheses:
+	def is_valid(self,str):
+		stack,valid=[],{'(':')','[':']','{':'}'}
+		for char in str:
+			if char in valid:
+				stack.append(char)
+			elif len(stack)==0 or valid[stack.pop()]!=char:
+				return False
+		return len(stack)==0
+
+p=parentheses()
+
+p.is_valid('()[]{}')
+p.is_valid('()[]{([)]}')
+p.is_valid('([)]')
+
+----------------------------------------------------
+
+#Mirror, Mirror- Write a function that validates a string with parentheses, curly braces, and square brackets.
+
+class mirror:
+    def mirrored_words(self,text):
+        return ' '.join(reversed(text.split()))
+
+
+mirror().mirrored_words('two joys and few perils')

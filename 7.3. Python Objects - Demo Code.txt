@@ -1,0 +1,57 @@
+#Objects- To create objects for classes in Python
+
+class fruit:            
+       def __init__(self,color,shape):      
+               self.color=color                 
+               self.shape=shape             
+       def sayhi(self):         
+               print(f"Hi.\nI am {self.color}and{self.shape}")
+
+orange = fruit('Orange','Round')
+orange.sayhi()
+
+----------------------------------------------------------------------------
+
+class Person:            
+       def sayhi(self):  
+              print("Hi")  
+                   
+Maddie=Person()
+Maddie.sayhi()
+
+Liv = Maddie
+Liv.sayhi()
+del Maddie
+Liv
+
+orange.size=7
+del orange
+orange
+
+
+
+
+
+
+#Queen of Hearts- Write a class dealing with a deck of cards of only hearts. Implement functionality to shuffle, deal a card, and show the cards in the current sequence.
+
+class Deck:
+	def __init__(self):
+		self.cards=['A',2,3,4,5,6,7,8,9,10,'J','Q','K']
+		self.shuffle()
+	def deal(self):
+		card=random.choice(self.cards)
+		self.cards.remove(card)
+		return f'You got {card}'
+	def shuffle(self):
+		random.shuffle(self.cards)
+	def show(self):
+		return self.cards
+
+
+d=Deck()
+d.show()
+d.deal()
+d.show()
+d.shuffle()
+d.show()

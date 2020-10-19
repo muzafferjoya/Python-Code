@@ -1,0 +1,34 @@
+#Objective- To observe multiple inheritance in Python
+
+class breakfast:
+	pass
+
+class lunch:
+	pass
+
+class brunch(breakfast, lunch):
+	pass
+
+--------------------------------------------------
+
+class red: pass
+class yellow: pass
+class blue: pass
+
+class orange(red, yellow): pass
+class green(yellow, blue): pass
+
+class slate_grey(green, orange, blue): pass
+slate_grey.mro()
+
+--------------------------------------------------
+
+class physics: id=1
+	 
+class chemistry: id=2
+	 
+class maths: id=3
+	 
+class student(physics, chemistry, maths): pass
+	 
+print(student.id)
