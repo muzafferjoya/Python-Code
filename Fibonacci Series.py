@@ -1,7 +1,11 @@
-def fib(length):
-	a,b,count=0,1,0
-	while(count<length):
-		print(a, end=', ');
-		count+=1;
-		a,b=b,a+b
-	print('...')
+a,b=0,1
+num=int(input("How many?"))
+print(0,1,end=' ')
+def fibr(num):
+    if num==2: return
+    global a,b
+    a,b=b,a+b
+    print(b,end=' ')
+    fibr(num-1)
+
+fibr(num)
